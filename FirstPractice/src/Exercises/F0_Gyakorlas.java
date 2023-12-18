@@ -20,10 +20,17 @@ public class F0_Gyakorlas {
         adultsAges.put("Mária", 30);
         System.out.println(adultsAges);
 
-        int c = 1;
-        adultsAges.put("Géza", c+1);
+        int sumOfVotes = 0;
+        for (Map.Entry mapElement : adultsAges.entrySet()) {
+            sumOfVotes += (int) mapElement.getValue();
+        }
+        System.out.println(sumOfVotes);
 
-        System.out.println(adultsAges);
-    }
+
+        Scanner scan = new Scanner(System.in);
+        String userDataStr = scan.nextLine();
+
+        //int a = (int) userDataStr;
+        }
 }
 

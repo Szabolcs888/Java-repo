@@ -20,6 +20,7 @@ package Temps.Array_and_Collections;
             - elvileg lassú az új elem hozzáadásában és törlésében */
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class List_Set {
     public static void main(String[] args) {
@@ -198,12 +199,35 @@ public class List_Set {
         System.out.println(numsList);
 
 
+        System.out.println();
+
+        System.out.println("----------Lista tartalmának átírása map-be. A key-ek maguk a címek lesznek (de mindegyik csak egyszer) és a value, mint darabszám (az adott cím előfordulásának száma) jelenik meg (azaz, ahányszor szerepel egy elem a listában)----------");
+
+        List<String> booksList = Arrays.asList("Son", "Harry Potter VI.", "Down and Out in Paris and London", "All about Sam", "1984", "Keep the Aspidistra Flying", "The Fellowship of the Ring", "Keep the Aspidistra Flying", "A Summer to Die", "Harry Potter V", "The Return of the King", "Harry Potter VI.", "The Return of the King", "Down and Out in Paris and London", "Harry Potter V", "A Summer to Die", "Harry Potter I.", "Harry Potter III.", "All about Sam", "Animal Farm", "Gathering Blue", "Homage to Catalonia", "Son", "The Two Towers", "Harry Potter III.", "Messenger", "The Return of the King", "Homage to Catalonia", "Harry Potter III.", "Harry Potter I.", "The Two Towers", "Gathering Blue", "Messenger", "The Fellowship of the Ring", "1984", "Harry Potter VI.", "Keep the Aspidistra Flying", "Gathering Blue", "Harry Potter V", "Harry Potter II.", "Homage to Catalonia", "Harry Potter V", "Animal Farm", "All about Sam", "Son");
+        Map<String, Integer> booksMap = new ConcurrentHashMap<>();
+
+        for (String book : booksList) {
+            if (booksMap.containsKey(book)) {
+                int originValue = booksMap.get(book);
+                booksMap.put(book, originValue + 1);
+            } else {
+                booksMap.put(book, 1);
+            }
+        }
+        System.out.println(booksMap);
+
+
+
         /*
 
         A lista sokkal rugalmasabb, mint a tömb. Egy lista pl. tartalmazhat sok más listát is:
         List<List<String>> names = Arrays.asList("Sándor", "József", "Benedek");
 
          */
+
+
+
+
 
 
         System.out.println();

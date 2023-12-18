@@ -9,8 +9,6 @@ public class Strings {
         // isempty és ami kimaradt, megnézni!!!!!
 
 
-
-
         //----------String kisbetűsből nagybetűssé alakítása és fordítva----------
 
         // már deklaráslásnál megtörténik az átalakítás
@@ -20,12 +18,12 @@ public class Strings {
 
         System.out.println();
 
-       //  Scannerrel bekért adatok átalakítása
+        //  Scannerrel bekért adatok átalakítása
         Scanner scan = new Scanner(System.in);
         System.out.println("Kérlek, írj valamit: ");
-       // String userData2 = scan.next();
-          String userData2 = scan.next().toUpperCase();  // a felhasználó által beírt adatot nagybetűssé alakítva tároljuk le
-       // String userData2 = scan.next().toLowerCase();   // a felhasználó által beírt adatot kisbetűssé alakítva tároljuk le
+        // String userData2 = scan.next();
+        String userData2 = scan.next().toUpperCase();  // a felhasználó által beírt adatot nagybetűssé alakítva tároljuk le
+        // String userData2 = scan.next().toLowerCase();   // a felhasználó által beírt adatot kisbetűssé alakítva tároljuk le
         System.out.println("stored data: " + userData2);
 
         // összehasonlításnál figyelmen kívül hagyja a kis és nagybetűket:
@@ -93,7 +91,7 @@ public class Strings {
         //          ami a startIndex és endIndex közötti részt tartalmazza (a startIndex
         //          helyen állót tartalmazni fogja, az endIndex helyen lévőt nem)----------
 
-        System.out.println(userData.substring(3,8));
+        System.out.println(userData.substring(3, 8));
 
 
         System.out.println();
@@ -140,9 +138,18 @@ public class Strings {
         int number = Integer.parseInt(stringNumber);
 
         // vagy, ha scannerből olvasunk be
-    //  int number = Integer.parseInt(scanner.nextLine());
+        //  int number = Integer.parseInt(scanner.nextLine());
 
-        System.out.println(number+4);
+        System.out.println(number + 4);
+
+        System.out.println();
+
+        //----------Szám konvertálása Stringgé----------
+
+        int num = 1;
+        String convNum = num + "";
+
+        System.out.println(3 + convNum); // a num értéke már Stringként jelenik meg
 
     }
 }
