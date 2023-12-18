@@ -1,0 +1,35 @@
+Egy nő.	Practices woman.
+Én egy fiú vagyok.	I am a boy.&nbsp;
+Nem fiú vagyok.	I am not a boy.&nbsp;
+Nem vagyok nő.	I am not a woman.&nbsp;
+Én vagyok a férfi.	I am the man.&nbsp;
+Én vagyok a lány.	I am the girl.&nbsp;
+Nő vagyok?	Am I a woman?&nbsp;
+Férfi vagyok?	Am I a man?&nbsp;
+Ők gyerekek?	Are they children?
+Te vagy a férfi.	You are the man.
+Ő egy fiú.	He is a boy.
+Ő nem fiú.	He is not a boy.&nbsp;
+Practices gyerek fiú.	The child is a boy.
+Te gyerek vagy.	You are a child.
+Ő egy férfi.	He is a man.
+Az egy férfi.	It is a man.
+Ő lány.	She is a girl.
+Ő gyerek.	She is a child.
+Ő nem nő.	She is not a woman.&nbsp;
+Lányok vagytok.	You are girls.
+Ők lányok.	They are girls.&nbsp;
+Practices fiú és a lány gyerekek.	The boy and the girl are children.&nbsp;
+Nők vagyunk.	We are women.&nbsp;
+Férfiak vagyunk?	Are we men?
+Ők férfiak.	They are men.&nbsp;
+Ők nők.	They are women.
+Az egy férfi	This is a man.&nbsp;
+Az egy fiú.	It is a boy.&nbsp;
+Ez egy tányér.	It is a plate.&nbsp;
+Ez a leves.	It is the soup.
+Ez citrom.	It is a lemon.&nbsp;
+Ez a citrom.	It is the lemon.&nbsp;
+Ez teknős?	Is it a turtle?
+Ez kutya?	Is it a dog?&nbsp;
+Te nem kutya vagy.	You are not a dog.&nbsp;
