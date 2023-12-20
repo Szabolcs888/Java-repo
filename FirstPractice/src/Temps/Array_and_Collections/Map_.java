@@ -12,6 +12,7 @@ package Temps.Array_and_Collections;
             - több memóriát használ mint a többi Collection elem */
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Map_ {
@@ -75,6 +76,16 @@ public class Map_ {
             System.out.println(mapElement.getKey() + " " + mapElement.getValue());
         }
 
+        // map tartalmának kiíratása "Iterator" Objektummal
+        Iterator<Map.Entry< String,Integer>> iterator = adultsAges.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Map.Entry entry = iterator.next();
+            System.out.println("Key : " + entry.getKey() + " value : " + entry.getValue());
+        }
+
+
+
+
         System.out.println();
 
         // így is rákérdezhetünk, hogy adott kulcs, vagy elem szerepel-e a listában (ha integer típusú kulcsról/elemről van szó, akkor is az "equals"-t kell használnunk " == " helyett)
@@ -129,25 +140,8 @@ public class Map_ {
         System.out.println("debug"+sum2);
 
 
-        /* egyéb variációk map iterálására
 
-        //Zsolt még ezt ajánlja:
-
-        public static void main(String[] args) {
-        Map<Integer, String> customers = new HashMap<>();
-		customers.put(1, "Jhon");
-		customers.put(2, "Smith");
-		customers.put(3, "Sally");
-
-		Iterator<Map.Entry<Integer, String>> iterator = customers.entrySet().iterator();
-		while (iterator.hasNext()) {
-			Map.Entry entry = iterator.next();
-			System.out.println("Key : " + entry.getKey() + " value : " + entry.getValue());
-		  }
-		}
-
-
-        // És még 10:
+        /* egyéb lehetőségek map iterálására
 
         To summarize the other answers and combine them with what I know, I found 10 main ways to do this (see below).
         Also, I wrote some performance tests (see results below). For example, if we want to find the sum of all of the

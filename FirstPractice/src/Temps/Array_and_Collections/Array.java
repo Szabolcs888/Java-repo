@@ -112,10 +112,23 @@ public class Array {
 
         for (int i = 0; i < secondArrayS.length; i++) {
             System.out.print(secondArrayS[i].equals(myFavoriteFruit) + " ");
-            }
-
+        }
 
         System.out.println();System.out.println();
+
+
+        //-----tömb adott elemének indexszámának lekérése-----
+        // A sort utasítás nélkül nem működik! És csak akkor megbízható, ha egy elem csak egyszer fordul elő a tömbben!
+        int intArr[] = {9, 1, 4, 8, 10, 11, 15, 20, 22, 35, 23, 27, 33, 45, 65,};
+        Arrays.sort(intArr);
+        System.out.println("A " + 20 + " a " + Arrays.binarySearch(intArr, 20) + ". indexen van.");
+
+        Arrays.sort(secondArrayS);
+        System.out.println("Az " + "Alma" + " a " + Arrays.binarySearch(secondArrayS, "Alma") + ". indexen van.");
+        System.out.println(secondArrayS);
+
+        System.out.println();
+        System.out.println();
 
         //-----tömb átkonvertálása listává
 

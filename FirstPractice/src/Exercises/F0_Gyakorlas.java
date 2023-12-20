@@ -4,33 +4,33 @@ import javax.print.Doc;
 import javax.print.DocFlavor;
 import javax.print.SimpleDoc;
 import java.io.FileInputStream;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 // Gyakorló fájl, bármikor törölhető a tartalma
 
 public class F0_Gyakorlas {
     public static void main(String[] args) {
-        Map<String, Integer> adultsAges = new HashMap<>();
-        adultsAges.put("Géza", 22);
-        adultsAges.put("Anikó", 19);
-        adultsAges.put("Erzsébet", 45);
-        adultsAges.put("Mária", 30);
-        System.out.println(adultsAges);
-
-        int sumOfVotes = 0;
-        for (Map.Entry mapElement : adultsAges.entrySet()) {
-            sumOfVotes += (int) mapElement.getValue();
-        }
-        System.out.println(sumOfVotes);
-
-
         Scanner scan = new Scanner(System.in);
-        String userDataStr = scan.nextLine();
 
-        //int a = (int) userDataStr;
-        }
+        System.out.println("szöveget kérek:");
+        String userDataStr = scan.nextLine();
+        System.out.println("számot kérek:");
+        int a = scan.nextInt();
+
+        System.out.println(userDataStr + a);
+
+        System.out.println(amount(Arrays.asList(1, 2, 3)));
+
+
+    }
+
+    private static int amount(List<Integer> numbers) {
+        int sum = 0;
+        for (Integer number : numbers) {
+            sum += number;
+
+        }return sum;
+    }
+
 }
 

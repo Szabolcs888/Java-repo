@@ -131,14 +131,16 @@ public class Strings {
 
         System.out.println();
 
-        //----------String konvertálása számmá----------
+        //----------String konvertálása számmá, floattá----------
 
         String stringNumber = "23";
 
         int number = Integer.parseInt(stringNumber);
+        float number2 = Float.parseFloat(stringNumber);
 
         // vagy, ha scannerből olvasunk be
-        //  int number = Integer.parseInt(scanner.nextLine());
+        // int number = Integer.parseInt(scanner.nextLine());
+
 
         System.out.println(number + 4);
 
