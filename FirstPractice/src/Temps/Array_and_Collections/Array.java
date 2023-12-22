@@ -118,7 +118,7 @@ public class Array {
 
 
         //-----tömb adott elemének indexszámának lekérése-----
-        // A sort utasítás nélkül nem működik! És csak akkor megbízható, ha egy elem csak egyszer fordul elő a tömbben!
+        // A sort utasítás nélkül nem működik! És csak akkor megbízható, ha egy elem csak egyszer fordul elő a tömbben, ill. ha helyesen van írva az adott elem (máskülönben hamis értéket ad!)!
         int intArr[] = {9, 1, 4, 8, 10, 11, 15, 20, 22, 35, 23, 27, 33, 45, 65,};
         Arrays.sort(intArr);
         System.out.println("A " + 20 + " a " + Arrays.binarySearch(intArr, 20) + ". indexen van.");

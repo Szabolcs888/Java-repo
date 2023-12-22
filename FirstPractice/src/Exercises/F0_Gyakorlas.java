@@ -10,27 +10,20 @@ import java.util.*;
 
 public class F0_Gyakorlas {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-
-        System.out.println("szöveget kérek:");
-        String userDataStr = scan.nextLine();
-        System.out.println("számot kérek:");
-        int a = scan.nextInt();
-
-        System.out.println(userDataStr + a);
-
-        System.out.println(amount(Arrays.asList(1, 2, 3)));
-
+        String compChoice = "PAPÍR";
+        String userChoice = "KŐ";
+        game(compChoice, userChoice);
 
     }
+    public static String game(String cCh, String uCh) {
+        String roundWinner = "";
+        if ((uCh.equals("KŐ")) && (cCh.equals("OLLÓ"))); {
+            roundWinner = "userWinner";
+        }
 
-    private static int amount(List<Integer> numbers) {
-        int sum = 0;
-        for (Integer number : numbers) {
-            sum += number;
 
-        }return sum;
-    }
+       return roundWinner;
+        }
 
 }
 
