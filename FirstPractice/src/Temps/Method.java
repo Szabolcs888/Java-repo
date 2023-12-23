@@ -87,6 +87,9 @@ public class Method {
         return (abclist.get(0) + abclist.get(1))* abclist.get(2);
     }
 
+    // metódus lista visszatérési értékkel (nincs meghívva!)
+    // public static List<Integer> scoreSum(int count, String winner){}
+
 
     // metódus map feldolgozására visszatérési érték nélkül
     public static void arrayPrint(int[] tomb) {

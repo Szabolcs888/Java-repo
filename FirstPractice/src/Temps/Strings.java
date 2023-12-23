@@ -9,6 +9,13 @@ public class Strings {
         // isempty és ami kimaradt, megnézni!!!!!
 
 
+
+        //----------String összehasonlítása másik Stringgel----------
+        // Soha ne az == operátort használjuk, mert false eredményt mutathat akkor is, ha egyezik a két String tartalma (abban az esetben, ha az egyik két Stringből lett létrehozva/módosítva)!
+        //Mindíg az equalst használjuk!
+
+
+
         //----------String kisbetűsből nagybetűssé alakítása és fordítva----------
 
         // már deklaráslásnál megtörténik az átalakítás
@@ -28,6 +35,7 @@ public class Strings {
 
         // összehasonlításnál figyelmen kívül hagyja a kis és nagybetűket:
         // (event.toLowerCase().equals("x"));
+
 
 
         System.out.println();

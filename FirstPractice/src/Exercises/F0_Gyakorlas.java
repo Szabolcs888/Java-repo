@@ -11,19 +11,15 @@ import java.util.*;
 public class F0_Gyakorlas {
     public static void main(String[] args) {
         String compChoice = "PAPÍR";
-        String userChoice = "KŐ";
-        game(compChoice, userChoice);
+        String userChoice = "PAPÍ";
+        userChoice = userChoice + "R";
 
+        if (compChoice == userChoice)
+            System.out.println("Egyenlő");
+        if (compChoice.equals(compChoice))
+            System.out.println("tényleg egyenlő");
     }
-    public static String game(String cCh, String uCh) {
-        String roundWinner = "";
-        if ((uCh.equals("KŐ")) && (cCh.equals("OLLÓ"))); {
-            roundWinner = "userWinner";
-        }
 
-
-       return roundWinner;
-        }
 
 }
 
