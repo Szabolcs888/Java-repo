@@ -1,9 +1,6 @@
 package Temps;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 // A visszatérési érték mindig csak egy adat lehet. Egy int, egy boolean, vagy egy list, stb..
 
@@ -91,7 +88,19 @@ public class Method {
     // public static List<Integer> scoreSum(int count, String winner){}
 
 
-    // metódus map feldolgozására visszatérési érték nélkül
+/*     metódus lista user általi feltöltésére, lista visszatérési értékkel (nincs meghívva!)
+    private static List<String> getFruitList() {
+        List<String> localFruitList = new ArrayList<>();
+        Scanner scan = new Scanner(System.in);
+        for (int i = 1; i <= 7; i++) {
+            localFruitList.add(scan.nextLine());
+        }
+        return localFruitList;
+    }
+ */
+
+
+    // metódus array(tömb) feldolgozására visszatérési érték nélkül
     public static void arrayPrint(int[] tomb) {
         for (int i = 0; i < tomb.length; i++) {
             System.out.println(tomb[i] + " ");

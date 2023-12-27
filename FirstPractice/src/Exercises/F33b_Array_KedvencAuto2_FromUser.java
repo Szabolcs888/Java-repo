@@ -1,6 +1,6 @@
 package Exercises;
 
-            /* 33. Feladat (Órai) (Zsolt megoldása)
+            /* 33.b Feladat (Órai) (Zsolt megoldása)
             Készítsetek egy programot, amelyben egy tömbnek már a
             létrehozásakor definiáljuk az értékeket. A String típusú
             array neve legyen carsArray és állítsunk be neki legalább
@@ -10,12 +10,25 @@ package Exercises;
             elemeken, azaz járjuk be a tömböt. Ha az adott indexű tömb
             elem megegyezik a myFavoriteCar változó értékével akkor írjuk
             ki annak értékét a konzolra és fűzzük hozzá, hogy “ a kedvenc
-            autómárkám.” */
+            autómárkám.”
 
-public class F33_Array_KedvencAuto2 {
+            A feladat annyiban módosul, hogy a usertől kérjünk be
+            utómárkákat, és ha valamelyik egyezik, akkor kiíratjuk */
+
+import java.util.Scanner;
+
+public class F33b_Array_KedvencAuto2_FromUser {
     public static void main(String[] args) {
 
-        String[] carsArray = {"Mercedes", "Kia", "Ferrari", "Alfa Romeo", "Ferrari"};
+        String[] carsArray = new String[3];
+        Scanner scanner = new Scanner(System.in);
+
+        String currentInput = "";
+        int carsArrayIndex = 0;
+        while (!((currentInput = scanner.next()).equals("x"))) {
+            carsArray[carsArrayIndex] = currentInput;
+            carsArrayIndex++;
+        }
         String myFavoriteCar = "Ferrari";
 
         //ciklus kezdete
@@ -41,4 +54,5 @@ public class F33_Array_KedvencAuto2 {
         */
     }
 }
+
 

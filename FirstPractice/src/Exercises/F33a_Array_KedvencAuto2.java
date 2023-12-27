@@ -1,6 +1,6 @@
 package Exercises;
 
-            /* 33. Feladat (Órai) (saját megoldás)
+            /* 33.a Feladat (Órai) (Zsolt megoldása)
             Készítsetek egy programot, amelyben egy tömbnek már a
             létrehozásakor definiáljuk az értékeket. A String típusú
             array neve legyen carsArray és állítsunk be neki legalább
@@ -12,24 +12,33 @@ package Exercises;
             ki annak értékét a konzolra és fűzzük hozzá, hogy “ a kedvenc
             autómárkám.” */
 
-public class F33_Array_KedvencAuto1_Boolean {
+public class F33a_Array_KedvencAuto2 {
     public static void main(String[] args) {
 
+        String[] carsArray = {"Mercedes", "Kia", "Ferrari", "Alfa Romeo", "Ferrari"};
+        String myFavoriteCar = "Ferrari";
 
-        String[] carsArray = {"Audi ", "BMV", "Volkswagen", "Mercedes", "Opel", "Seat", "Suzuki", "Opel"}; // az utolsó Opel azért lett beletéve, hogy megmutatkozzon a break utasítás eredménye is - azaz, hiába szerepel többször a keresendő elem, a break-nek köszönhetően az első találat után befejeződik a tömb átnézése
-        String myFavoriteCar = "Opel";
-
+        //ciklus kezdete
+        //HA carsArray indexen lévő eleme megegyezik myFavoriteCar-al, akkor sout
+        //ciklus vége
         for (int i = 0; i < carsArray.length; i++) {
             if (carsArray[i].equals(myFavoriteCar)) {
-                System.out.println(carsArray[i] + " a kedvenc autóm!");
+                System.out.println(carsArray[i] + " a kedvenc autómárkám.");
+                //break az opcionális, optimalizálás miatt berakható, hogy ne nézze a tömb többi elemét, ha már megtalálta az egyezőt
                 break;
             }
         }
-        System.out.println();
 
-        // Zsolt kiegészítése; tömb elemeinek összehasonlítása boolean-val
+        /* ugyanaz mint ez, csak nem annyira szép
         for (int i = 0; i < carsArray.length; i++) {
-            System.out.print(carsArray[i].equals(myFavoriteCar) + " ");
+            switch (carsArray[i]){
+                case "Ferrari":
+                    System.out.println(carsArray[i] + " a kedvenc autómárkám.");
+                    i=carsArray.length;
+                    break;
+            }
         }
+        */
     }
 }
+

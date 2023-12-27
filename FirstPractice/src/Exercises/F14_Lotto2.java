@@ -2,7 +2,7 @@ package Exercises;
 
 import java.util.Random;
 
-        /* 14. Feladat) (saját megoldás)
+        /* 14. Feladat (saját megoldás)
         Készítsetek programot, amely más lottóknak megfelelő
         potenciális nyerőszámokat is kiírja a képernyőre.
         Az ötöslottónak, a hatoslottónak és a skandináv lottónak. */

@@ -1,6 +1,6 @@
 package Exercises;
 
-            /* 65 Feladat (Órai) (saját megoldás)
+            /* 65. Feladat (Órai) (saját megoldás)
             A 17.d Kő-papír olló metódusítása */
 
 
@@ -12,50 +12,26 @@ import java.util.Scanner;
 /*
         main();
             introduction();
-            userCounter();
+            game();
+                userCounter();
                 compChoice();
                 userChoice();
-                game();
+                winOfRound();
                 scoreSum();
                 scorePrint();
-            endOfGameScorePrint();
-
-
-            A while cikklus tartalmát külön metódusba és annak legyen a neve game metódus!
-
+                endOfGameScorePrint();
  */
-
-
 
 public class F65_Met_KoPapirOllo {
     public static void main(String[] args) {
         introduction();
-        int userCounter = fromUserCounter();
-        int counter = 1;
-        int userPoints = 0;
-        int compPoints = 0;
-        String userChX = "";
-        List<Integer> scoreList;
-        do {
-            String compChoice = compChMet();
-            String userChoice = userChMet(counter);
-            String roundWinner = game(compChoice, userChoice);
-            userChX = userChoice;
-            if (!userChoice.equals("X")) {
-                scoreList = scoreSum(counter, compChoice, userChoice, roundWinner);
-                userPoints += scoreList.get(0);
-                compPoints += scoreList.get(1);
-                scorePrint(userPoints, compPoints);
-                counter++;
-            }
-        } while (counter <= userCounter && !userChX.equals("X"));
-        endOfGameScorePrint(userPoints, compPoints);
+        game();
     }
 
     public static void introduction() {
         System.out.println();
         System.out.println();
-        System.out.println("                   Üdvözöllek a KŐ-PAPÍR-OLLÓ játékban!");
+        System.out.println("                         Üdvözöllek a KŐ-PAPÍR-OLLÓ játékban!");
         System.out.println();
         System.out.println("A játék több fordulós. A győztes körök 3 pontot érnek, a döntetlen 1 - 1 pontot, kivéve");
         System.out.println(" minden harmadik kört, amelyek dupla pontot és minden hetedik kört, amelyek háromszoros");
@@ -65,30 +41,47 @@ public class F65_Met_KoPapirOllo {
         System.out.println("Hány fordulóból álljon a játék?");
     }
 
+    public static void game() {
+        int userCounter = fromUserCounter();
+        int roundCounter = 1;
+        int userPoints = 0;
+        int compPoints = 0;
+        String userChX = "";
+        List<Integer> scoreList = new ArrayList<>();
+        do {
+            String compChoice = compChMet();
+            String userChoice = userChMet(roundCounter);
+            String roundWinner = winOfRound(compChoice, userChoice);
+            userChX = userChoice;
+            if (!userChoice.equals("X")) {
+                scoreList = scoreSum(roundCounter, compChoice, userChoice, roundWinner);
+                userPoints += scoreList.get(0);
+                compPoints += scoreList.get(1);
+                scorePrint(userPoints, compPoints);
+                roundCounter++;
+            }
+        } while (roundCounter <= userCounter && !userChX.equals("X"));
+        endOfGameScorePrint(userPoints, compPoints);
+    }
+
     public static int fromUserCounter() {
-        int scanConvCountNum = 0;
-        String userCountScan = "";
-        while (scanConvCountNum + 0 == 0) {
+        int scanUserCounter = 0;
+        do {
             try {
                 Scanner scanString = new Scanner(System.in);
-                userCountScan = scanString.next();
-                scanConvCountNum = Integer.parseInt(userCountScan);
+                scanUserCounter = scanString.nextInt();
+                if (scanUserCounter <= 0) {
+                    System.out.println();
+                    System.out.println("Egynél nem lehet kevesebb kör, nagyobb számot adj meg, kérlek! ");
+                }
             } catch (Exception e) {
                 System.out.println();
                 System.out.println("Számot adj meg, kérlek!");
             }
-            String zeroCounter = "";
-            for (int i = 0; i < 1000; i++) {
-                zeroCounter = zeroCounter + "0";
-                if ((userCountScan.equals(zeroCounter))) {
-                    System.out.println();
-                    System.out.println("Nem lehet 0 körös, így nagyobb számot adj meg, kérlek! ");
-                }
-            }
-        }
+        } while (scanUserCounter <= 0);
         System.out.println();
-        System.out.println("A játék " + scanConvCountNum + " fordulós lesz. Sok szerencsét!");
-        return scanConvCountNum;
+        System.out.println("A játék " + scanUserCounter + " fordulós lesz. Sok szerencsét!");
+        return scanUserCounter;
     }
 
     public static String compChMet() {
@@ -141,7 +134,7 @@ public class F65_Met_KoPapirOllo {
         return userCh;
     }
 
-    public static String game(String cCh, String uCh) {
+    public static String winOfRound(String cCh, String uCh) {
         if (((uCh.equals("KŐ")) && (cCh.equals("OLLÓ"))) ||
                 ((uCh.equals("PAPÍR")) && (cCh.equals("KŐ"))) ||
                 ((uCh.equals("OLLÓ")) && (cCh.equals("PAPÍR")))) {

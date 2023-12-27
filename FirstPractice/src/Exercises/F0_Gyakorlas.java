@@ -18,8 +18,14 @@ public class F0_Gyakorlas {
             System.out.println("Egyenlő");
         if (compChoice.equals(compChoice))
             System.out.println("tényleg egyenlő");
+        
+        
+        as();
     }
 
+    private static void as() {
+
+    }
 
 }
 

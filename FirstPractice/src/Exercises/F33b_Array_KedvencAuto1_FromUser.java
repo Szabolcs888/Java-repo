@@ -1,6 +1,6 @@
 package Exercises;
 
-            /* 33. Feladat (Órai) (saját megoldás)
+            /* 33.b Feladat (Órai) (saját megoldás)
             Készítsetek egy programot, amelyben egy tömbnek már a
             létrehozásakor definiáljuk az értékeket. A String típusú
             array neve legyen carsArray és állítsunk be neki legalább
@@ -12,17 +12,15 @@ package Exercises;
             ki annak értékét a konzolra és fűzzük hozzá, hogy “ a kedvenc
             autómárkám.”
 
-            A feladat annyiban módosul, hogy a usertől kérjünk be
-            utómárkákat, és ha valamelyik egyezik, akkor kiíratjuk.
+            A feladat annyiban módosul, hogy a usertől kérjünk be egy
+            utómárkát, és ha egyezik, akkor kiíratjuk.
 
             Én annyival egészítettem még ki, hogy azt is kiíratjuk, ha
             nincs egyezés. */
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
-public class F33_Array_KedvencAuto1_FromUser {
+public class F33b_Array_KedvencAuto1_FromUser {
     public static void main(String[] args) {
 
         String[] carsArray = {"AUDI", "BMV", "VOLKSWAGEN", "MERCEDES", "OPEL", "SEAT", "SUZUKI", "OPEL"};
@@ -31,18 +29,16 @@ public class F33_Array_KedvencAuto1_FromUser {
         System.out.println("Kérlek, add meg a kedvenc autómárkád:");
         String userFavoriteCar = scanString.next().toUpperCase();
 
+        int yOn = 0;
         for (int i = 0; i < carsArray.length; i++) {
             if (carsArray[i].equals(userFavoriteCar)) {
                 System.out.println(carsArray[i] + " a kedvenc autód és szerepel a listán!");
+                yOn += +1;
                 break;
             }
         }
-
-        List<String> list = Arrays.asList(carsArray);
-        if (list.contains(userFavoriteCar)) {
-        } else {
+        if (yOn ==0)
             System.out.println(userFavoriteCar + " nem szerepel a listán.");
-        }
     }
 }
 
