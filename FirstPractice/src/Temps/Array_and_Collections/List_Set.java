@@ -131,6 +131,37 @@ public class List_Set {
 
         System.out.println();
 
+        System.out.println("----------String lista elemeinek (felszeletelése) elválasztása egymástól és új listába helyezése----------");
+
+        // mindkettőnek ugyanaz az eredménye
+        List<String> loggedHours = new ArrayList<>();
+        List<String> splitLoggedHours = new ArrayList<>();
+        for (String item : loggedHours)
+            for (String spliItem : item.split(","))
+                splitLoggedHours.add(spliItem);
+
+/*      ugyanaz az eredmény:
+        List<String> loggedHours = new ArrayList<>();
+        List<String> splitLoggedHours = new ArrayList<>();
+        for (String item : loggedHours)
+            splitLoggedHours.addAll(Arrays.asList(item.split(",")));
+    }
+ */
+
+        System.out.println("----------String lista elemeinek (felszeletelése) elválasztása egymástól és a számok összeadása tömb segítségével----------");
+        List<String> companies = Arrays.asList(
+                "Zuckerberg,4", "Steve,4", "Bill,1", "Bill,2");
+
+        int result = 0;
+        for (String company : companies) {
+            String[] companyArray = company.split(",");
+            result += Integer.parseInt(companyArray[1]);
+        }
+        System.out.println("Total number of companies: " + result);
+
+
+        System.out.println();
+
         System.out.println("----------lista sorrendbe rendezése----------");
 
         Collections.sort(numsList3);
@@ -170,7 +201,8 @@ public class List_Set {
         System.out.println();
 
         // for-ral
-        for (int i =0; i < numsList.size(); i++)
+        for (
+                int i = 0; i < numsList.size(); i++)
             System.out.println(numsList.get(i));
 
 
@@ -179,7 +211,8 @@ public class List_Set {
         System.out.println("----------Lista integereinek összeadása----------");
 
         int sum = 0;
-        for (Integer item : numsList)
+        for (
+                Integer item : numsList)
             sum = sum + item;
 
         System.out.println(sum);
@@ -206,7 +239,8 @@ public class List_Set {
         List<String> booksList = Arrays.asList("Son", "Harry Potter VI.", "Down and Out in Paris and London", "All about Sam", "1984", "Keep the Aspidistra Flying", "The Fellowship of the Ring", "Keep the Aspidistra Flying", "A Summer to Die", "Harry Potter V", "The Return of the King", "Harry Potter VI.", "The Return of the King", "Down and Out in Paris and London", "Harry Potter V", "A Summer to Die", "Harry Potter I.", "Harry Potter III.", "All about Sam", "Animal Farm", "Gathering Blue", "Homage to Catalonia", "Son", "The Two Towers", "Harry Potter III.", "Messenger", "The Return of the King", "Homage to Catalonia", "Harry Potter III.", "Harry Potter I.", "The Two Towers", "Gathering Blue", "Messenger", "The Fellowship of the Ring", "1984", "Harry Potter VI.", "Keep the Aspidistra Flying", "Gathering Blue", "Harry Potter V", "Harry Potter II.", "Homage to Catalonia", "Harry Potter V", "Animal Farm", "All about Sam", "Son");
         Map<String, Integer> booksMap = new ConcurrentHashMap<>();
 
-        for (String book : booksList) {
+        for (
+                String book : booksList) {
             if (booksMap.containsKey(book)) {
                 int originValue = booksMap.get(book);
                 booksMap.put(book, originValue + 1);
@@ -224,10 +258,6 @@ public class List_Set {
         List<List<String>> names = Arrays.asList("Sándor", "József", "Benedek");
 
          */
-
-
-
-
 
 
         System.out.println();
@@ -255,7 +285,8 @@ public class List_Set {
         randomNums.add(5);
         randomNums.add(38);
 
-        for (Integer item : randomNums)  // kiolvasás for-each-vel
+        for (
+                Integer item : randomNums)  // kiolvasás for-each-vel
             System.out.println(item);
 
         System.out.println(randomNums);

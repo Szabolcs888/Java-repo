@@ -11,9 +11,7 @@ package Temps.Array_and_Collections;
             - a kulcsot nekünk kell biztosítani
             - több memóriát használ mint a többi Collection elem */
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Map_ {
     public static void main(String[] args) {
@@ -77,13 +75,11 @@ public class Map_ {
         }
 
         // map tartalmának kiíratása "Iterator" Objektummal
-        Iterator<Map.Entry< String,Integer>> iterator = adultsAges.entrySet().iterator();
+        Iterator<Map.Entry<String, Integer>> iterator = adultsAges.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry entry = iterator.next();
             System.out.println("Key : " + entry.getKey() + " value : " + entry.getValue());
         }
-
-
 
 
         System.out.println();
@@ -115,7 +111,7 @@ public class Map_ {
                 winner = mapElement.getKey() + "";
             }
         }
-        System.out.println(winner +" a legidősebb.");
+        System.out.println(winner + " a legidősebb.");
 
 
         System.out.println();
@@ -133,11 +129,27 @@ public class Map_ {
         double sum2 = 0;
         for (Map.Entry mapElement : adultsAges.entrySet()) {
             sum2 = sum2 + Double.parseDouble(mapElement.getValue() + ""); // először a value átalakul String-gé, utána double-vá.
-         // sum2 = sum2 + Integer.parseInt(mapElement.getValue() + "");
-         // sum2 = sum2 + (int)(mapElement.getValue()); // ún. "parseolás"-sal is átalakítható az adott érték int-té
+            // sum2 = sum2 + Integer.parseInt(mapElement.getValue() + "");
+            // sum2 = sum2 + (int)(mapElement.getValue()); // ún. "parseolás"-sal is átalakítható az adott érték int-té
         }
         System.out.println(adultsAges);
-        System.out.println("debug"+sum2);
+        System.out.println("debug" + sum2);
+
+
+        // lista tartalmának áthelyezése mapbe úgy, hogy a lista minden második eleme legyen a value (ez esetben még összeadásra is kerültek azon key-ek value-i, amelyek már szerepelnek (így nem felülíródnak, hanem összeadódnak a value-k)
+        // a value-ba íródó számok eredetileg Stringek voltak és a map feltöltése közben lettek átalakítva int-té
+        List<String> splitLoggedHours = Arrays.asList(
+                "Zuckerberg", "4", "Steve", "4", "Bill", "1", "Bill", "2", "Zuckerberg", "4", "Bill", "2",
+                "Zuckerberg", "1", "Zuckerberg", "3", "Zuckerberg", "1", "Zuckerberg", "1", "Steve", "4");
+        Map<String, Integer> loggedHoursMap = new HashMap<>();
+        for (int i = 0; i < splitLoggedHours.size(); i += 2) {
+            if (!loggedHoursMap.containsKey(splitLoggedHours.get(i)))
+                loggedHoursMap.put(splitLoggedHours.get(i), Integer.valueOf(splitLoggedHours.get(i + 1)));
+            else {
+                loggedHoursMap.put(splitLoggedHours.get(i), loggedHoursMap.get(splitLoggedHours.get(i)) +
+                        Integer.valueOf(splitLoggedHours.get(i + 1)));
+            }
+        }
 
 
 
