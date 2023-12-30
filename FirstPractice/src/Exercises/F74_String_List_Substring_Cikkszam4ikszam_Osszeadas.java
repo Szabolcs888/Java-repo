@@ -21,7 +21,7 @@ import java.util.Scanner;
             print();
 */
 
-public class F74_String_List_Cikkszam4ikszam_Osszeadas {
+public class F74_String_List_Substring_Cikkszam4ikszam_Osszeadas {
     public static void main(String[] args) {
         List<String> itemList = getItems();
         int sum = sumItems(itemList);

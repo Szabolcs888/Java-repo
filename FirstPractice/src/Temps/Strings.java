@@ -17,7 +17,7 @@ public class Strings {
         System.out.println(name.substring(2)); // az adott index-től kezdve kivágja a String-et
         System.out.println(name.substring(2, 4));   // az adott index-től az adott indexig kivágja a String-et (az endindex nem lesz az eredmény része)
         System.out.println(name.trim());           // a string elejéről és végéről eltávolításra kerülnek a szóközök
-        System.out.println(name.isEmpty());        // megmondja, hogy a String tartalmaz-e karaktereket (nyilván egyetklen betű is true-t fog eredményezni)
+        System.out.println(name.isEmpty());        // megmondja, hogy a String tartalmaz-e karaktereket (nyilván egyetlen betű is true-t fog eredményezni)
 
         // a split darabokra vágja a karakterláncot a megadott kifejezés szerint
         String fruits = "Málna-Eper";

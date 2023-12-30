@@ -49,8 +49,16 @@ public class Method {
     // metódus usertől adatbekérésre
     public static String readFromUser() {
         Scanner scan = new Scanner(System.in);
-        return scan.next();
+        return scan.nextLine();
     }
+
+    // metódus usertől adatbekérésre kiírandó szöveggel
+    public static String readFromUser(String question) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println(question);
+        return scan.nextLine();
+    }
+
 
     // metódus lista feldolgozására visszatérési érték nélkül
     private static void print(List<String> nyomtatas) {
@@ -81,7 +89,7 @@ public class Method {
 
     // metódus lista paraméterrel és int visszatérési értékkel
     public static int ListInput(List<Integer> abclist) {
-        return (abclist.get(0) + abclist.get(1))* abclist.get(2);
+        return (abclist.get(0) + abclist.get(1)) * abclist.get(2);
     }
 
     // metódus lista visszatérési értékkel (nincs meghívva!)
