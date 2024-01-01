@@ -10,13 +10,22 @@ import java.util.*;
 
 public class F0_Gyakorlas {
     public static void main(String[] args) {
+        trycatch();
+        arrayMethod();
+    }
 
-String a ="asd";
-        a.substring(0, 1);
-String b = a.substring(0, 1);
-        System.out.println(b);
+    private static void trycatch() {
+        try {
 
-       // System.out.println(argsText);
-}
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            System.out.println("Hey, there is no such an index in the array!");
+        }
+        System.out.println("Thanks for using our service!");
+    }
+
+    public static void arrayMethod() throws ArrayIndexOutOfBoundsException {
+        int[] exampleArray = {21, 44, 33, 77};
+        System.out.println(exampleArray[15]);
+    }
 }
 
