@@ -1,6 +1,6 @@
 package Exercises;
 
-            /* 86 Feladat (saját megoldás)
+            /* 86. Feladat (saját megoldás)
             Kérjünk el egy stringet a felhasználótól és írjuk ki a
             5. karakterét. Kezeljük le a keletkező exceptiont. */
 

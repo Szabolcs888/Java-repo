@@ -69,7 +69,7 @@ public class Selection_IfElse_SwitchC {
                 System.out.println("Congrats, Józska is my 2nd bestie.");
                 break;
             default:
-                System.out.println("No luck."); // default esetén nincs szükség break utasításra, mert az az utolsó a sorban
+                System.out.println("No luck."); // A default csak akkor fut le, ha egyik case sem futott le előtte. Default esetén nincs szükség break utasításra, mert az az utolsó a sorban.
         }
 
         // ugyanez if-else -vel

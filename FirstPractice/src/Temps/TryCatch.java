@@ -88,3 +88,11 @@ public class TryCatch {
         System.out.println(exampleArray[15]);
     }
 }
+
+// A throw akkor kell, amikor te magad akarsz egy exception-t létrehozni, amit valahol később le kell kezelni.
+// A throws pedig akkor kell, amikor az expectiont, ami keletkezik/keletkezhet (mindegy, hogy te hoztad létre
+// throw-al vagy "gyárilag" keletkezik, mert mondjuk a tömb olyan elemére hivatkozol, ami nem létezik),
+// nem az adott metódusban akarjuk elkapni try-catch-ben, hanem tovább passzoljuk, továbbdobjuk a metódusból
+// oda, ahol a metódushívás történik, hogy majd ott kelljen lekezelni (az exception-t) egy új try -catch-el,
+// vagy ismét továbbdobni throws-el.
+// Exception-ök esetében mindig ez a két opciónk van. Catch-el elkapjuk, vagy tovább dobjuk throws-al.

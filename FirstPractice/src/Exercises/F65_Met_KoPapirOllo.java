@@ -29,16 +29,12 @@ public class F65_Met_KoPapirOllo {
     }
 
     public static void introduction() {
-        System.out.println();
-        System.out.println();
-        System.out.println("                         Üdvözöllek a KŐ-PAPÍR-OLLÓ játékban!");
-        System.out.println();
-        System.out.println("A játék több fordulós. A győztes körök 3 pontot érnek, a döntetlen 1 - 1 pontot, kivéve");
-        System.out.println(" minden harmadik kört, amelyek dupla pontot és minden hetedik kört, amelyek háromszoros");
-        System.out.println("   pontot érnek. Az X lenyomásával bármelyik körben kiléphetsz. A tippedet megadhatod");
-        System.out.println("              a 'k', vagy a 'p', vagy az 'o' billentyűk lenyomásával is.");
-        System.out.println();
-        System.out.println("Hány fordulóból álljon a játék?");
+        System.out.println(System.lineSeparator() + System.lineSeparator() + "                         Üdvözöllek a KŐ-PAPÍR-OLLÓ játékban!"
+                + System.lineSeparator() + System.lineSeparator() + "A játék több fordulós. A győztes körök 3 pontot érnek, a döntetlen 1 - 1 pontot, kivéve"
+                + System.lineSeparator() + " minden harmadik kört, amelyek dupla pontot és minden hetedik kört, amelyek háromszoros"
+                + System.lineSeparator() + "   pontot érnek. Az X lenyomásával bármelyik körben kiléphetsz. A tippedet megadhatod"
+                + System.lineSeparator() + "              a 'k', vagy a 'p', vagy az 'o' billentyűk lenyomásával is."
+                + System.lineSeparator() + System.lineSeparator() + "Hány fordulóból álljon a játék?");
     }
 
     public static void game() {
@@ -71,16 +67,13 @@ public class F65_Met_KoPapirOllo {
                 Scanner scanString = new Scanner(System.in);
                 scanUserCounter = scanString.nextInt();
                 if (scanUserCounter <= 0) {
-                    System.out.println();
-                    System.out.println("Egynél nem lehet kevesebb kör, nagyobb számot adj meg, kérlek! ");
+                    System.out.println(System.lineSeparator() + "Egynél nem lehet kevesebb kör, nagyobb számot adj meg, kérlek! ");
                 }
             } catch (Exception e) {
-                System.out.println();
-                System.out.println("Számot adj meg, kérlek!");
+                System.out.println(System.lineSeparator() + "Számot adj meg, kérlek!");
             }
         } while (scanUserCounter <= 0);
-        System.out.println();
-        System.out.println("A játék " + scanUserCounter + " fordulós lesz. Sok szerencsét!");
+        System.out.println(System.lineSeparator() + "A játék " + scanUserCounter + " fordulós lesz. Sok szerencsét!");
         return scanUserCounter;
     }
 
@@ -102,9 +95,11 @@ public class F65_Met_KoPapirOllo {
     }
 
     public static String userChMet(int count) {
-        System.out.println();
-        System.out.println();
-        System.out.println(count + ". forduló");
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+        }
+        System.out.println(System.lineSeparator() + System.lineSeparator() + count + ". forduló");
         System.out.println("Kérlek, válassz egyet: kő, papír vagy olló");
         Scanner scanString = new Scanner(System.in);
         String userCh = scanString.next().toUpperCase();
@@ -117,8 +112,7 @@ public class F65_Met_KoPapirOllo {
         }
         while (!userCh.equals("KŐ") && !userCh.equals("PAPÍR") &&
                 !userCh.equals("OLLÓ") && !userCh.equals("X")) {
-            System.out.println();
-            System.out.println("Kérlek, írj be helyes kifejezést!");
+            System.out.println(System.lineSeparator() + "Kérlek, írj be helyes kifejezést!");
             userCh = scanString.next().toUpperCase();
             if ((userCh.equals("K"))) {
                 userCh = "KŐ";
@@ -150,10 +144,12 @@ public class F65_Met_KoPapirOllo {
         int userPoints = 0;
         int compPoints = 0;
         List<Integer> countWinList = new ArrayList<>();
-        System.out.println();
-        System.out.println("A te választásod: " + userCh);
-        System.out.println("A gép választása: " + compCh);
-        System.out.println();
+        System.out.println(System.lineSeparator() + "A te választásod: " + userCh);
+        System.out.println("A gép választása: " + compCh + System.lineSeparator());
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
         if (winner.equals("userWinner")) {
             System.out.println("A " + count + ". fordulót te nyerted.");
             if (count % 3 == 0) {
@@ -191,15 +187,16 @@ public class F65_Met_KoPapirOllo {
     }
 
     public static void scorePrint(int userSc, int compSc) {
-        System.out.println();
-        System.out.println("A játékos pontjainak száma: " + userSc);
+        System.out.println(System.lineSeparator() + "A játékos pontjainak száma: " + userSc);
         System.out.println("A gép pontjainak száma: " + compSc);
     }
 
     public static void endOfGameScorePrint(int userScSum, int compScSum) {
-        System.out.println();
-        System.out.println("A játék végetért.");
-        System.out.println();
+        System.out.println(System.lineSeparator() + "A játék végetért." + System.lineSeparator());
+        try {
+            Thread.sleep(3000);
+        } catch (Exception e) {
+        }
         if (userScSum > compScSum) {
             System.out.println("Gratulálok, te nyertél " + userScSum + " : " + compScSum + " arányban!");
         } else if (userScSum < compScSum) {
