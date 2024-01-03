@@ -3,6 +3,7 @@ package Temps;
 import java.util.*;
 
 // A visszatérési érték mindig csak egy adat lehet. Egy int, egy boolean, vagy egy list, stb..
+// Viszont egy metóduson belüli újabb metódushívással már bármennyi adatot továbbküldhetünk!
 
 public class Method {
     public static void main(String[] args) {
@@ -58,6 +59,19 @@ public class Method {
         System.out.println(question);
         return scan.nextLine();
     }
+
+    // metódus usertől adatbekérésre ciklusban listába gyűjtve, kiírandó szöveggel
+    public static List<String> readFromUser2(String question) {
+        List<String> shoppingList = new ArrayList<>();
+        Scanner scan = new Scanner(System.in);
+        System.out.println(question);
+        for (int i = 1; i <= 3; i++) {
+            System.out.println("\n" + i + ". tétel:");
+            shoppingList.add(scan.nextLine());
+        }
+        return shoppingList;
+    }
+
 
 
     // metódus lista feldolgozására visszatérési érték nélkül

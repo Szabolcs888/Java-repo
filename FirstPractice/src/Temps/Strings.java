@@ -89,7 +89,8 @@ public class Strings {
 
 
         // kiíratásnál egy sorban benne lehet az új sor, így a sorkihagyás is
-        System.out.println("Szia!" +System.lineSeparator());
-        System.out.println( "Mi újság?");
+        // a ' \n ' ugyanazt eredményezi, mint a System.lineSeparator()
+        System.out.println("Szia!" + System.lineSeparator());
+        System.out.println("Mi újság?");
     }
 }
