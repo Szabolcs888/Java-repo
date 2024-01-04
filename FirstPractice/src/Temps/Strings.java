@@ -1,5 +1,8 @@
 package Temps;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Strings {
@@ -24,6 +27,25 @@ public class Strings {
         System.out.println(fruits.split("-")[0]);         //"Málna-Eper"  --  ["Málna","Eper"]  // a []-be pedig a "feldarabolt" String kiírandó részének "indexszáma" írandó
         System.out.println(fruits.split("-")[1]);         //"Málna-Eper"  --  ["Málna","Eper"]
 
+        // String splittelése listába
+        List<String> bookList = new ArrayList<String>(Arrays.asList(name.split(" , ")));
+
+        // String splittelése listába for-ral
+        String text = ("m, n, o, p");
+        List<String> lines3 = new ArrayList<>();
+        for (int i = 0; i < text.length()/2-1; i++) {
+            lines3.add(text.split(", ")[i]);
+        }
+
+        // lista splittelése listába
+        List<String> szetvalasztandoElemekListaja = Arrays.asList("a, b, c, d", "g, j, k");
+        List<String> lines2 = new ArrayList<>();
+        for (String line : szetvalasztandoElemekListaja) {
+            for (String item : line.split(", ")) {
+                System.out.println(item);
+                lines2.add(item);
+            }
+        }
 
         // String kisbetűsből nagybetűssé alakítása és fordítva
         System.out.println(name.toUpperCase());    // a szöveg nagybetűssé alakítása

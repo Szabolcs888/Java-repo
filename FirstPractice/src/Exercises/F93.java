@@ -71,7 +71,7 @@ public class F93 {
         List<String> lines = new ArrayList<>();
         List<String> lines2 = new ArrayList<>();
         try {
-            lines = Files.readAllLines(Paths.get("src/resources/restaurantsVoteCount.txt"));
+            lines = Files.readAllLines(Paths.get("src/resources/restaurants.txt"));
             for (String line : lines) {
                 line = line.replace("\"","");
                 for (String line2 : line.split(", ")) {
@@ -79,7 +79,8 @@ public class F93 {
                 }
             }
         } catch (IOException e) {
-          throw new RuntimeException(e);
+
+            System.out.println("Nem létezik a fájl!");
         }
         return lines2;
     }

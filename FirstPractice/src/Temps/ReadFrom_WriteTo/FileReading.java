@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -12,12 +13,12 @@ public class FileReading {
     public static void main(String[] args) throws IOException {
 
         // olvasás txt-ből és listába importálás (soronként kerül új elem a listába)
+        List<String> lines = new ArrayList<>();
         try {
-            List<String> lines = Files.readAllLines(Paths.get("src/resources/firstWriting.txt"));
+            lines = Files.readAllLines(Paths.get("src/resources/firstWriting.txt"));
             for (String line : lines) {
                 System.out.println(line);
             }
-            System.out.println(lines.size());
         } catch (IOException e) {
             System.out.println("Nem létezik a fájl!");
         }
@@ -25,6 +26,7 @@ public class FileReading {
         System.out.println();
 
         // olvasás csv fájlból és listába importálás
+        /*
         try {
             List<String> lines = Files.readAllLines(Paths.get("src/resources/trainings.csv"));
             System.out.println(lines);
@@ -38,6 +40,8 @@ public class FileReading {
             // ez általában elég komoly hibát szokott jelenteni, így a programot külső beavatkozás nélkül nem
             // nagyon lehet segíteni, így tovább forgatjuk egy RuntimeException-be, amit majd a felhasználó lát.
         }
+
+         */
 
 
         System.out.println();

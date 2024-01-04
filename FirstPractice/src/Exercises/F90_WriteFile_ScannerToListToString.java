@@ -21,7 +21,7 @@ import java.util.Scanner;
             writeToFile();
 */
 
-public class F90_uj {
+public class F90_WriteFile_ScannerToListToString {
     public static void main(String[] args) {
         List<String> shoppingList = readFromUser("Kérlek, add meg a bevásárlólista tételeit!");
         String shoppingListInString = convertListtoString(shoppingList);
