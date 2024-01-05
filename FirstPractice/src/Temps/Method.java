@@ -147,3 +147,110 @@ public class Method {
         return (num1 * num2);
     }
 }
+
+
+//////////////////////////////////////////////////////
+// Stringnél, intnél, booleannál nem módosul az eredeti változó, ha metódusban módosítjuk,
+// viszont az Array, a List, a Set és a Map módosul
+
+/*
+        int num = 5;
+        modositasSzam(num);
+        System.out.println(num);
+
+        System.out.println();
+        ////////////////////////////////////////////////
+
+        double dbl = 2.2;
+        modositasDouble(dbl);
+        System.out.println(dbl);
+
+        System.out.println();
+        ////////////////////////////////////////////////
+
+        String word = "autó";
+        modositasString(word);
+        System.out.println(word);
+
+
+        System.out.println();
+        ////////////////////////////////////////////////
+
+        int[] secondArray = {34, 2, 222, 101, 1223};
+        modositasArray(secondArray);
+
+        for (Integer item : secondArray)
+            System.out.println(item);
+
+
+        System.out.println();
+        /////////////////////////////////////////////////
+
+        List<String> namesList = new ArrayList<>();
+        namesList.add("Hajó");
+        namesList.add("Repülő");
+        namesList.add("Busz");
+        modositasList(namesList);
+        System.out.println(namesList);
+
+
+        System.out.println();
+        /////////////////////////////////////////////////
+        Set<String> randomNames = new HashSet<>();
+        randomNames.add("asszony");     // új elem hozzáadása
+        randomNames.add("nő");
+        randomNames.add("lány");
+        modositasSet(randomNames);
+        System.out.println(randomNames);
+
+        System.out.println();
+        //////////////////////////////////////////////////
+
+        Map<String, Integer> adultsAges = new HashMap<>();
+        adultsAges.put("Géza", 22);
+        adultsAges.put("Anikó", 36);
+        adultsAges.put("Péter", 25);
+
+        modositasMap(adultsAges);
+        System.out.println(adultsAges);
+
+
+        System.out.println();
+        /////////////////////////////////////////////////
+        boolean yesOrNo = true;
+        modositasBoolean(yesOrNo);
+        System.out.println(yesOrNo);
+    }
+
+    private static void modositasSzam(int num) {
+        num = 8;
+    }
+
+    private static void modositasDouble(double dbl) {
+        dbl = 3.0;
+    }
+
+    private static void modositasString(String word) {
+        word = "kutya";
+    }
+
+    private static void modositasArray(int[] secondArra) {
+        secondArra[0] = 1;
+    }
+
+    private static void modositasList(List<String> list) {
+        list.remove(1);
+    }
+
+    private static void modositasSet(Set<String> randomNames) {
+        randomNames.remove("asszony");
+    }
+
+    private static void modositasMap(Map<String, Integer> adultsAges) {
+        adultsAges.remove("Géza");
+    }
+
+    private static void modositasBoolean(boolean yesOrNo) {
+        yesOrNo = false;
+    }
+ */

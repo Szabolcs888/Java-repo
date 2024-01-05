@@ -1,1 +1,14 @@
-"Salt", "Plat·n", "42", "Essencia", "Babel", "Borkonyha", "Costes", "42", "Borkonyha", "Rumour", "Plat·n", "Babel", "Stand", "Rumour", "Salt", "Plat·n", "42", "Rumour", "Rumour", "Borkonyha", "Rumour", "Borkonyha", "Babel", "Essencia", "Salt", "Plat·n", "Borkonyha", "42", "Babel", "Essencia", "42", "Stand", "Salt", "Costes", "42", "42", "Costes", "Stand", "Borkonyha", "Stand", "Costes", "Babel", "Essencia", "Stand", "Salt", "Plat·n", "Costes", "Salt", "Plat·n", "Salt", "Plat·n", "Essencia", "Rumour", "Salt", "Plat·n", "Rumour", "Stand", "Salt", "Essencia", "Babel", "Babel", "Essencia", "Rumour", "Essencia", "Salt", "Plat·n", "Borkonyha", "Stand", "Essencia", "Rumour", "Borkonyha", "Costes", "Babel", "Costes", "Salt", "Plat·n", "Essencia", "Stand", "Costes", "Borkonyha", "Essencia", "42", "Essencia", "42", "Stand", "Rumour", "Salt", "Plat·n", "Rumour", "Borkonyha", "Stand", "Babel", "Rumour", "Stand", "Salt", "Essencia", "Costes", "Costes", "42", "42", "Salt", "Plat·n", "Essencia", "Babel", "Costes", "Rumour", "Costes", "Stand", "Rumour", "Essencia", "Borkonyha", "Salt", "Plat·n", "Rumour", "Borkonyha", "42", "Babel", "Stand", "42", "Costes", "42", "Salt", "42", "Salt", "Essencia", "Borkonyha", "Essencia", "Borkonyha", "Rumour"
+8 √©tteremre lehetett szavazni.
+√ñsszesen 123 szavazat √©rkezett.
+
+A szavazatok eloszl√°sa:
+Salt - 17 szavazat
+Stand - 24 szavazat
+Rumour - 16 szavazat
+Babel - 11 szavazat
+Borkonyha - 14 szavazat
+Costes - 13 szavazat
+42 - 15 szavazat
+Plat√°n - 13 szavazat
+
+A szavaz√°st a(z) Stand nyerte.

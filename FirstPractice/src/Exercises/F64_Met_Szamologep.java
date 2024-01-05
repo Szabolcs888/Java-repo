@@ -8,10 +8,13 @@ package Exercises;
             ( getCalculationResult(operator, number1,number2) ), Végül egy metódust ami
             kiírja az eredményt a konzolra (showResultToTheUser(result) ) */
 
-            // getNumberFromUser();
-            // getOperatorFromUser();
-            // getCalculationResult();
-            // showResultToTheUser();
+/*
+        main();
+            getNumberFromUser();
+            getOperatorFromUser();
+            getCalculationResult();
+            showResultToTheUser();
+*/
 
 import java.util.ArrayList;
 import java.util.List;

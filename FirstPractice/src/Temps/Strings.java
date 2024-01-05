@@ -32,15 +32,16 @@ public class Strings {
 
         // String splittelése listába for-ral
         String text = ("m, n, o, p");
-        List<String> lines3 = new ArrayList<>();
+        List<String> splitTextInList = new ArrayList<>();
         for (int i = 0; i < text.length()/2-1; i++) {
-            lines3.add(text.split(", ")[i]);
+            splitTextInList.add(text.split(", ")[i]);
         }
 
         // lista splittelése listába
         List<String> szetvalasztandoElemekListaja = Arrays.asList("a, b, c, d", "g, j, k");
         List<String> lines2 = new ArrayList<>();
         for (String line : szetvalasztandoElemekListaja) {
+          //  line = line.replace("\"",""); // idézőjelek törlése
             for (String item : line.split(", ")) {
                 System.out.println(item);
                 lines2.add(item);

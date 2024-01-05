@@ -1,7 +1,6 @@
 package Temps.ReadFrom_WriteTo;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -58,6 +57,22 @@ public class FileReading {
         } catch (Exception e) {
         }
         System.out.println(writingFileItemToString);
+
+
+        System.out.println();
+
+        // beolvasás másik módszerrel és Stringbe írás UTF-8 kódolással
+        String readFromFile = "";
+        try {
+            File fileDirs = new File("src/resources/lanynevListaEkezetekkel.txt");
+            BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileDirs), "ISO-8859-1"));
+            String str;
+            while ((str = in.readLine()) != null) {
+                readFromFile += str + ", ";
+            }
+        } catch (Exception e) {
+        }
+        System.out.println(readFromFile);
     }
 }
 
