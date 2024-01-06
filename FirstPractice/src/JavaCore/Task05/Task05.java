@@ -23,6 +23,7 @@ public class Task05 {
            user1.setMunkahely(munkahely);
 
         System.out.println(nev + ": " + user1);
+        System.out.println(user1.toString());
     }
 
     public static String readFromUser(String question) {

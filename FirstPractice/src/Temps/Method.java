@@ -8,6 +8,12 @@ import java.util.*;
 public class Method {
     public static void main(String[] args) {
 
+        // Ha azt szeretnénk, hogy egy változó vagy Array, Collections
+        // az egész osztály minden metódusában látszódjon, akkor a
+        // "static" parancsot kell eléírnunk, és a main elé kell tennünk
+    //    static List<String> sampleList = new ArrayList<>();
+
+
         String userAnswer = readFromUser();
         System.out.println(userAnswer);
 

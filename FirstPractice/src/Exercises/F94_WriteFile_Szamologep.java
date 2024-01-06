@@ -37,8 +37,7 @@ public class F94_WriteFile_Szamologep {
         float number1 = 0;
         float number2 = 0;
         boolean num1YOn;
-        System.out.println();
-        System.out.println("Kérem az első számot:");
+        System.out.println(System.lineSeparator() + "Kérem az első számot:");
         do {
             try {
                 Scanner scan = new Scanner(System.in);
@@ -46,11 +45,10 @@ public class F94_WriteFile_Szamologep {
                 num1YOn = true;
             } catch (Exception e) {
                 num1YOn = false;
-                System.out.println("Valós számot adj meg!");
+                System.err.println("Valós számot adj meg!");
             }
         } while (num1YOn == false);
-        System.out.println();
-        System.out.println("Kérem a második számot:");
+        System.out.println(System.lineSeparator() + "Kérem a második számot:");
         do {
             try {
                 Scanner scan = new Scanner(System.in);
@@ -58,7 +56,7 @@ public class F94_WriteFile_Szamologep {
                 num1YOn = true;
             } catch (Exception e) {
                 num1YOn = false;
-                System.out.println("Valós számot adj meg!");
+                System.err.println("Valós számot adj meg!");
             }
         } while (num1YOn == false);
         scanList.add(number1);
@@ -69,14 +67,17 @@ public class F94_WriteFile_Szamologep {
     public static String getOperatorFromUser() {
         Scanner scan = new Scanner(System.in);
         String operator = "";
-        System.out.println("Kérek egy operátort! (+, -, *, /, p(pumped))");
+        System.out.println(System.lineSeparator() + "Kérek egy operátort! (+, -, *, /, p(pumped))");
         do {
             try {
                 operator = scan.next();
             } catch (Exception e) {
             }
-            if (!operator.equals("+"))
-                System.out.println("Valós operátort adj meg! (+, -, *, /, p(pumped))");
+            // if (!operator.equals("+") || !operator.equals("-") || !operator.equals("*") || !operator.equals("/") || !operator.equals("p") || !operator.equals("pumped"))
+            //if (!operator.equals("+"))
+            if (!operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/") && !operator.equals("p") && !operator.equals("pumped")) {
+                System.err.println(System.lineSeparator() + "Valós operátort adj meg! (+, -, *, /, p(pumped))");
+            }
         } while (!operator.equals("+") && !operator.equals("-") && !operator.equals("*") && !operator.equals("/") && !operator.equals("p") && !operator.equals("pumped"));
         return operator;
     }
@@ -104,7 +105,7 @@ public class F94_WriteFile_Szamologep {
     }
 
     public static void showResultToTheUser(Float localResult) {
-        System.out.println("Az eredmény: " + localResult);
+        System.out.println(System.lineSeparator() + "Az eredmény: " + localResult);
     }
 
     private static void writeToFile(float num1, float num2, String operator, float result) {

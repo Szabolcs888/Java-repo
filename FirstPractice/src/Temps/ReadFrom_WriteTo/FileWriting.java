@@ -29,6 +29,23 @@ public class FileWriting {
         }
 
 
+        // írás fájlba létrehozással, majd ha már létezik, hozzáfűzéssel
+        String content;
+        try {
+            content = ("Szervusz"+System.lineSeparator());
+            Files.write(Paths.get("src/resources/rng.txt"), content.getBytes("UTF-8"), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            System.out.println("valami nem jó");
+            try {
+                content = ("Szervusz"+System.lineSeparator());
+                Files.write(Paths.get("src/resources/rng.txt"), content.getBytes("UTF-8"));
+
+            } catch (IOException j) {
+                System.out.println("valami nem jó");
+            }
+        }
+
+
 
     // mappa létrehozása
         new File("src/resources/ujMappa").mkdirs();

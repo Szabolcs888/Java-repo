@@ -26,6 +26,5 @@ public class F53_Map_alap {
         for (Map.Entry mapElement : myFavoriteFruits.entrySet()) {
             System.out.println(mapElement.getKey() + " " + mapElement.getValue());
         }
-
     }
 }

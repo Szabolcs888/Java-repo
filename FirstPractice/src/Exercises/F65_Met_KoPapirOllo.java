@@ -67,10 +67,10 @@ public class F65_Met_KoPapirOllo {
                 Scanner scanString = new Scanner(System.in);
                 scanUserCounter = scanString.nextInt();
                 if (scanUserCounter <= 0) {
-                    System.out.println(System.lineSeparator() + "Egynél nem lehet kevesebb kör, nagyobb számot adj meg, kérlek! ");
+                    System.err.println(System.lineSeparator() + "Egynél nem lehet kevesebb kör, nagyobb számot adj meg, kérlek! ");
                 }
             } catch (Exception e) {
-                System.out.println(System.lineSeparator() + "Számot adj meg, kérlek!");
+                System.err.println(System.lineSeparator() + "Számot adj meg, kérlek!");
             }
         } while (scanUserCounter <= 0);
         System.out.println(System.lineSeparator() + "A játék " + scanUserCounter + " fordulós lesz. Sok szerencsét!");
@@ -112,7 +112,7 @@ public class F65_Met_KoPapirOllo {
         }
         while (!userCh.equals("KŐ") && !userCh.equals("PAPÍR") &&
                 !userCh.equals("OLLÓ") && !userCh.equals("X")) {
-            System.out.println(System.lineSeparator() + "Kérlek, írj be helyes kifejezést!");
+            System.err.println(System.lineSeparator() + "Kérlek, írj be helyes kifejezést!");
             userCh = scanString.next().toUpperCase();
             if ((userCh.equals("K"))) {
                 userCh = "KŐ";

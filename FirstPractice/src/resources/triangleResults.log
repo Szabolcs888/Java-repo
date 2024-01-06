@@ -1,0 +1,20 @@
+1. teszteset: 3, 5, 3 oldalhosszokból lehetséges háromszög.
+2. teszteset: 5, 8, 11 oldalhosszokból lehetséges háromszög.
+3. teszteset: 4, 9, 7 oldalhosszokból lehetséges háromszög.
+4. teszteset: 9, 5, 2 oldalhosszokból nem lehetséges háromszög.
+5. teszteset: 9, 2, 5 oldalhosszokból nem lehetséges háromszög.
+6. teszteset: 3, 8, 4 oldalhosszokból nem lehetséges háromszög.
+7. teszteset: 11, 6, 6 oldalhosszokból lehetséges háromszög.
+8. teszteset: 12, 6, 1 oldalhosszokból nem lehetséges háromszög.
+9. teszteset: 3, 8, 8 oldalhosszokból lehetséges háromszög.
+10. teszteset: 10, 2, 6 oldalhosszokból nem lehetséges háromszög.
+11. teszteset: 10, 12, 1 oldalhosszokból nem lehetséges háromszög.
+12. teszteset: 6, 11, 10 oldalhosszokból lehetséges háromszög.
+13. teszteset: 4, 8, 4 oldalhosszokból nem lehetséges háromszög.
+14. teszteset: 12, 10, 2 oldalhosszokból nem lehetséges háromszög.
+15. teszteset: 9, 12, 11 oldalhosszokból lehetséges háromszög.
+16. teszteset: 1, 6, 9 oldalhosszokból nem lehetséges háromszög.
+17. teszteset: 10, 2, 3 oldalhosszokból nem lehetséges háromszög.
+18. teszteset: 8, 10, 7 oldalhosszokból lehetséges háromszög.
+19. teszteset: 3, 11, 10 oldalhosszokból lehetséges háromszög.
+20. teszteset: 1, 2, 1 oldalhosszokból nem lehetséges háromszög.
