@@ -1,5 +1,7 @@
 package Exercises;
 
+import JavaCore.gyakorlas_Circle.Circle;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -9,42 +11,50 @@ import java.util.*;
 // Gyakorló fájl, bármikor törölhető a tartalma
 
 public class F0_Gyakorlas {
+     static List<String> namesList = new ArrayList<>();
+
+
     public static void main(String[] args) {
-        rng();
+      //  List<String> namesList = new ArrayList<>();
+
+        int num = 5;
+        modositasSzam(num);
+        System.out.println(num);
+
+        String word = "    autó    ";
+        // System.out.println(word);
+        modositasString(word);
+        // word =word.trim();
+        // System.out.println(word.replace("a", "k"));
+        System.out.println("mod. után: ");
+        System.out.println(word);
+
+        namesList.add("Hajó");
+        namesList.add("Repülő");
+        namesList.add("Busz");
+        modositasList();
+      //  System.out.println(namesList);
+
+        Circle abc =new Circle(1);
+      //  abc.getRad();
     }
 
-    private static void rng() {
-        Random random = new Random();
-        int num1 = 0;
-        int num2 =0;
-        int num3 = 0;
-
-        for (int i = 0; i < 10; i++) {
-            num1 = random.nextInt(12) + 1;
-            num2 = random.nextInt(12) + 1;
-            num3 = random.nextInt(12) + 1;
-            System.out.println(num1 + ", " + num2 + ", " + num3);
-            writeToFile(num1,num2,num3);
-        }
+    private static void modositasSzam(int num) {
+        num = 8;
     }
 
-private static void writeToFile(int num1, int num2, int num3) {
-    String content;
-    try {
-            content = (num1 + ", " + num2 + ", " + num3 +System.lineSeparator());
-            Files.write(Paths.get("src/resources/rng.txt"), content.getBytes("UTF-8"), StandardOpenOption.APPEND);
-    } catch (IOException e) {
-        System.out.println("valami nem jó");
-        try {
-            content = (num1 + ", " + num2 + ", " + num3 + ", "+System.lineSeparator());
-            Files.write(Paths.get("src/resources/rng.txt"), content.getBytes("UTF-8"));
-
-        } catch (IOException j) {
-            System.out.println("valami nem jó");
-        }
+    private static void modositasString(String word) {
+       // word = "kutya";
+        word = word.trim();
+        word=word.replace("u", "w");
+        System.out.println(word);
     }
 
-}
+    private static void modositasList() {
+        namesList.remove(1);
+
+    }
+
 }
 
 

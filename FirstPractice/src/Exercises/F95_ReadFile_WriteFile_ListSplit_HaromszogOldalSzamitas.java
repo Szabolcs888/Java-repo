@@ -23,7 +23,7 @@ import java.util.List;
             datasCountAndWriteToFile();
 */
 
-public class F95_uj {
+public class F95_ReadFile_WriteFile_ListSplit_HaromszogOldalSzamitas {
     public static void main(String[] args) {
         List<String> triangleDataListFromFile = readFromFile();
         String result = datasCountAndPrint(triangleDataListFromFile);
@@ -58,10 +58,10 @@ public class F95_uj {
             System.out.print((caseCounter) + ". teszteset: " + triangleDataListFromFile.get(0 + listNumbersCounter) + ", " + triangleDataListFromFile.get(1 + listNumbersCounter) + ", " + triangleDataListFromFile.get(2 + listNumbersCounter));
             if (a + b > c && a + c > b && c + b > a) {
                 System.out.println(" oldalhosszokból lehetséges háromszög.");
-                result += (caseCounter) + ". teszteset: " + triangleDataListFromFile.get(0 + listNumbersCounter) + ", " + triangleDataListFromFile.get(1 + listNumbersCounter) + ", " + triangleDataListFromFile.get(2 + listNumbersCounter)+" oldalhosszokból lehetséges háromszög."+ System.lineSeparator();
+                result += (caseCounter) + ". teszteset: " + triangleDataListFromFile.get(0 + listNumbersCounter) + ", " + triangleDataListFromFile.get(1 + listNumbersCounter) + ", " + triangleDataListFromFile.get(2 + listNumbersCounter)+" oldalhosszokból lehetséges háromszög." + System.lineSeparator();
             } else {
-                System.out.println(" oldalhosszokból nem lehetséges háromszög.");
-                result += (caseCounter) + ". teszteset: " + triangleDataListFromFile.get(0 + listNumbersCounter) + ", " + triangleDataListFromFile.get(1 + listNumbersCounter) + ", " + triangleDataListFromFile.get(2 + listNumbersCounter)+" oldalhosszokból nem lehetséges háromszög."+ System.lineSeparator();
+                System.out.println(" oldalhosszokból NEM lehetséges háromszög.");
+                result += (caseCounter) + ". teszteset: " + triangleDataListFromFile.get(0 + listNumbersCounter) + ", " + triangleDataListFromFile.get(1 + listNumbersCounter) + ", " + triangleDataListFromFile.get(2 + listNumbersCounter)+" oldalhosszokból NEM lehetséges háromszög."+ System.lineSeparator();
             }
             caseCounter += 1;
             listNumbersCounter += 3;
@@ -75,8 +75,8 @@ public class F95_uj {
             System.out.println("A fájl nem létezett, ezért létrehoztam.");
             try {
                 Files.write(Paths.get("src/resources/triangleResults.log"), result.getBytes("UTF-8"));
-            } catch (IOException j) {
-                System.out.println("valami nem jó");
+            } catch (IOException f) {
+                System.out.println("Valami hiba történt.");
             }
         }
     }

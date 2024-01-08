@@ -48,6 +48,31 @@ public class Strings {
             }
         }
 
+        // lista splittelése Stringbe for-each-vel
+        List<String> szetvalasztandoElemekListaja2 = Arrays.asList("a,b,c", "g,j,k");
+        String decision = "";
+        for (String triangle : szetvalasztandoElemekListaja2) {
+            String[] triangleSidesArray = triangle.split(",");
+            String aside = triangleSidesArray[0];
+            String bside = triangleSidesArray[1];
+            String cside = triangleSidesArray[2];
+            decision += "" + aside + ", " + bside + ", " + cside + System.lineSeparator();
+        }
+        System.out.println(decision);
+
+        // lista splittelése Stringbe for-each-vel és továbbküldés metódussal
+        List<String> szetvalasztandoElemekListaja3 = Arrays.asList("5,22,18", "6,8,4");
+        String decision2 = "";
+        for (String triangle : szetvalasztandoElemekListaja3) {
+            String[] triangleSidesArray = triangle.split(","); //["5","6","7"]
+            int aside = Integer.parseInt(triangleSidesArray[0]);
+            int bside = Integer.parseInt(triangleSidesArray[1]);
+            int cside = Integer.parseInt(triangleSidesArray[2]);
+       //     decision += getTriangleMsg(aside, bside, cside) + System.lineSeparator();
+        }
+
+
+
         // String kisbetűsből nagybetűssé alakítása és fordítva
         System.out.println(name.toUpperCase());    // a szöveg nagybetűssé alakítása
         System.out.println(name.toLowerCase());    // a szöveg kisbetűssé alakítása

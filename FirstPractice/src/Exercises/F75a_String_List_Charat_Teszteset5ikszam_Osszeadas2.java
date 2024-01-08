@@ -13,12 +13,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/*
-        main();
-            analyse();
-            printSum();
-*/
-
 public class F75a_String_List_Charat_Teszteset5ikszam_Osszeadas2 {
     public static void main(String[] args) {
         List<String> execitonResultList = Arrays.asList("00171", "00181", "00190", "00200", "0021X", "00220");

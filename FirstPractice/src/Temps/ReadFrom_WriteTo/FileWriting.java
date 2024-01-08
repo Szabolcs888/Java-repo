@@ -30,25 +30,23 @@ public class FileWriting {
 
 
         // írás fájlba létrehozással, majd ha már létezik, hozzáfűzéssel
-        String content;
+        String result = "";
         try {
-            content = ("Szervusz"+System.lineSeparator());
-            Files.write(Paths.get("src/resources/rng.txt"), content.getBytes("UTF-8"), StandardOpenOption.APPEND);
+            Files.write(Paths.get("src/resources/triangleResults.log"), result.getBytes("UTF-8"), StandardOpenOption.APPEND);
         } catch (IOException e) {
-            System.out.println("valami nem jó");
+            System.out.println("A fájl nem létezett, ezért létrehoztam.");
             try {
-                content = ("Szervusz"+System.lineSeparator());
-                Files.write(Paths.get("src/resources/rng.txt"), content.getBytes("UTF-8"));
-
+                Files.write(Paths.get("src/resources/triangleResults.log"), result.getBytes("UTF-8"));
             } catch (IOException j) {
-                System.out.println("valami nem jó");
+                System.out.println("Valami hiba történt.");
             }
         }
 
 
-
-    // mappa létrehozása
+        // mappa létrehozása
         new File("src/resources/ujMappa").mkdirs();
+
+
     }
 
     // mappa és fájl létrehozása paraméterként érkező tartalommal, elérési úttal és névvel
@@ -77,3 +75,44 @@ public class FileWriting {
         }
     }
 }
+
+
+// random generált számok fájlba írása
+/*
+    public static void main(String[] args) {
+        rng();
+    }
+
+    private static void rng() {
+        Random random = new Random();
+        int num1 = 0;
+        int num2 = 0;
+        int num3 = 0;
+
+        for (int i = 0; i < 10; i++) {
+            num1 = random.nextInt(12) + 1;
+            num2 = random.nextInt(12) + 1;
+            num3 = random.nextInt(12) + 1;
+            System.out.println(num1 + ", " + num2 + ", " + num3);
+            writeToFile(num1, num2, num3);
+        }
+    }
+
+    private static void writeToFile(int num1, int num2, int num3) {
+        String content;
+        try {
+            content = (num1 + ", " + num2 + ", " + num3 + System.lineSeparator());
+            Files.write(Paths.get("src/resources/rng.txt"), content.getBytes("UTF-8"), StandardOpenOption.APPEND);
+        } catch (IOException e) {
+            System.out.println("valami nem jó");
+            try {
+                content = (num1 + ", " + num2 + ", " + num3 + ", " + System.lineSeparator());
+                Files.write(Paths.get("src/resources/rng.txt"), content.getBytes("UTF-8"));
+
+            } catch (IOException j) {
+                System.out.println("valami nem jó");
+            }
+        }
+    }
+}
+ */
